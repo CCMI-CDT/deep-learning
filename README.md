@@ -8,7 +8,9 @@ This repository is a template that can be used to create a site for resources fo
 
 2. In the settings of the new repository, click on "Pages" and set source to "GitHub Actions".
 
-3. Update the title and authors in [book.toml](book.toml)
+3. In the "Actions" tab of the repository, click "I understand and want to activate Actions"
+
+4. Update the title and authors in [book.toml](book.toml)
 
 ## Editing a site
 
