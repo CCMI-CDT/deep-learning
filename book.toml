@@ -1,5 +1,5 @@
 [book]
-title = "TITLE OF YOUR TRAINING WEEK"
-authors = ["Timo Betcke", "Matthew Scroggs", "ADD NAMES HERE"]
+title = "Deep Learning in Theory and Practice"
+authors = ["Timo Betcke", "Matthew Scroggs", "Martin Benning"]
 language = "en"
 src = "src"
