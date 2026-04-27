@@ -1,4 +1,4 @@
-# Summary
+# Deep Learning in Theory and Practice
 
 [Introduction](./intro.md)
 
