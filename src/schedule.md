@@ -26,8 +26,10 @@
   - The Unrolling Principle: Truncating iterative algorithms to a fixed number of layers with learnable weights trained end-to-end.
   - Unrolled Architectures: LISTA for sparse coding; Learned Primal-Dual (LPD) network as an unrolled PDHG.
 - **13:00 – 14:00: Lunch**
-- **14:00 – 16:00: Coding Challenge (continued)**
-  - Learning the regularisation parameter of a variational deblurring model via bilevel optimisation, differentiating through the lower-level reconstruction, or using unrolled architectures via Deep Inverse.
+- **14:00 – 16:00: ARC Forum and Social (Optional, no scheduled class)**
+  - **14:00 – 15:00:** ARC weekly forum.
+  - **15:00 onwards:** ARC social hour.
+  - No formal training session is scheduled on Tuesday afternoon so attendees can join these events.
 
 ## Wednesday: Plug-and-Play Priors
 
@@ -48,8 +50,9 @@
   - Deep Equilibrium Models (DEQ): Replacing finite depth with a single fixed-point condition; memory-efficient training via implicit differentiation.
 - **13:00 – 14:00: Lunch**
 - **14:00 – 16:00: Guest Lecture and Q&A**
-  - Topic: Real-world deployment of deep learning in Medical Imaging.
-  - Q&A session with guest speaker
+  - Speaker: Dr Jonas Latz, University of Manchester.
+  - Topic: Stochastic gradient methods in continuous time for machine learning, including stochastic gradient processes, convergence and ergodicity, and implications for modern ML optimisation practice.
+  - Q&A with the guest speaker.
 
 ## Friday: Group Presentations
 
