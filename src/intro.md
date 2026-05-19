@@ -11,7 +11,7 @@ Topics covered include:
 
 The workshop consists of morning lectures, afternoon coding sessions, and group presentations on Friday. Students will work in small groups on an image reconstruction challenge, competing to achieve the best PSNR and SSIM on a hidden test set.
 
-Lecture materials are provided via the GitHub repository: https://github.com/Deep-Learning-Theory-Practice-2026/Course-Materials-Public.
+Lecture materials are provided via the GitHub repository: [https://github.com/Deep-Learning-Theory-Practice-2026/Course-Materials-Public](https://github.com/Deep-Learning-Theory-Practice-2026/Course-Materials-Public).
 
 ## Lecturers
 
