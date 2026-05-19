@@ -3,62 +3,130 @@
 ## Monday: Foundations of Deep Learning
 
 - **11:00 – 13:00: Introduction to Deep Learning (Lecture)**
-  - Neural Network Architectures: From the Perceptron to MLPs.
-  - Activation functions (ReLU, Sigmoid, Softmax etc.).
-  - Convolutional Neural Networks (CNNs): Convolution as a local, weight-sharing linear operator; pooling and receptive fields
-  - ResNets and skip connections, UNets.
-  - Training Dynamics: Loss functions (MSE, Cross-Entropy), Gradient Descent, SGD and Adam. Practical training considerations: dropout, batch normalisation, weight decay, and learning rate scheduling.
-  - The Chain Rule of Calculus: Mathematical derivation of Backpropagation.
-  - Generalisation of Backpropagation to operators stemming from optimisation problems, fixed-point problems, or continuous limits of network architectures.
+  - The Deep Learning Revolution & Motivation
+  - Deep Learning Primitives: Architectures & Activations
+    - Neural Network Architectures: From the Perceptron to MLPs
+    - Activation Functions (ReLU, Sigmoid, Softmax, etc.)
+  - Convolutional Neural Networks (CNNs)
+    - Discrete Convolutions and Cross-Correlation
+    - Pooling, Subsampling, and Receptive Fields
+  - Advanced Architectures: ResNets and UNets
+    - Skip Connections and Residual Networks
+    - Encoder-Decoder Structures
+  - Training Dynamics & Optimisation
+    - Loss Functions (MSE, Cross-Entropy)
+    - Gradient Descent, SGD, and Adam Optimiser
+    - Practical Training Considerations: Dropout, Batch Normalisation, Weight Decay, Learning Rate Scheduling
+  - The Chain Rule of Calculus & Backpropagation
+    - Classical Backpropagation Recursions
+    - Generalisation to Implicit Operators: Bilevel, Fixed-Point, and Continuous Limits
+  - Direct Supervised Learning (End-to-End) & Its Pitfalls
+    - Data Consistency Problem
+    - Lipschitz Dilemma and Adversarial Vulnerability
+    - Opaque Implicit Bias
 - **13:00 – 14:00: Lunch**
 - **14:00 – 16:00: Introduction to the Coding Challenge (Practice)**
-  - Problem Statement: Recovering a sharp image from noisy, degraded measurements using a known forward operator.
-  - Software Stack: PyTorch, DeepInverse.
-  - Baseline Implementation: A total-variation based reconstruction method.
-  - Competition: You will compete with your peers in groups of two/three to achieve the highest PSNR and SSIM on a hidden test set. Model weights ≤ 100 MB, inference on CPU within 20 minutes.
+  - Problem Statement: Restoring high-quality images from motion blur and noise
+  - Software Stack: PyTorch, DeepInverse (`deepinv`)
+  - Baseline Implementation: Mathematical reconstruction method (classical inverse problem approach)
+  - Competition Details: Groups of 3–4; evaluate on hidden test set (PSNR/SSIM metrics); model size ≤ 100 MB; CPU inference within 20 minutes
 
 ## Tuesday: Bilevel Optimisation and Unrolling
 
-- **11:00 – 13:00: Bilevel Optimisation & Unrolling (Lecture)**
-  - Bilevel Optimisation: Formulating hyper-parameter learning as a nested upper/lower-level problem.
-  - A brief inntroduction to convex and non-convex optimisation and algorithms
-  - Differentiating Through the Lower Level: The Implicit Function Theorem (IFT) and sensitivity analysis; handling non-smooth functions via smoothing (Huber loss).
-  - The Unrolling Principle: Truncating iterative algorithms to a fixed number of layers with learnable weights trained end-to-end.
-  - Unrolled Architectures: LISTA for sparse coding; Learned Primal-Dual (LPD) network as an unrolled PDHG.
+- **11:00 – 13:00: Advanced Deep Learning for Inverse Problems (Lecture)**
+  - Recap: Inverse Problems & End-to-End Learning
+    - The Inverse Problem Formulation ($y^\delta = Ax^\dagger + \eta$)
+    - Pitfalls of End-to-End Learning Revisited
+    - Classical Methods vs. Deep Learning Trade-offs
+  - Null-Space Networks & Data Consistency
+    - The Null Space of Forward Operators
+    - Orthogonal Decomposition of Images ($\mathbb{R}^n = \mathcal{N}(A) \oplus \mathcal{R}(A^\top)$)
+    - Null-Space Architecture: Enforcing Strict Data Consistency
+    - Interpretability and Safety Guarantees
+  - Variational Methods & Optimisation Algorithms
+    - Inverse Problems as Variational (Regularised) Optimisation
+    - Classical Regularisation Techniques
+    - Iterative Algorithms: ISTA and PDHG
+  - Bilevel Optimisation & Sensitivity Analysis
+    - Formulating Hyper-Parameter Learning as Nested Optimisation
+    - Introduction to Convex and Non-Convex Optimisation
+    - Differentiating Through the Lower Level via the Implicit Function Theorem (IFT)
+    - Handling Non-Smooth Functions via Huber Smoothing
+  - Learning Regularisers with Guarantees
+    - NETT (Network Tikhonov Regularisation)
+    - ICNNs (Input Convex Neural Networks) for Recovering Stability Guarantees
+  - The Unrolling Principle & Architectures
+    - Truncating Iterative Algorithms to Fixed-Depth Learnable Networks
+    - LISTA: Learned ISTA
+    - Learned Primal-Dual (LPD) Networks as Unrolled PDHG
 - **13:00 – 14:00: Lunch**
 - **14:00 – 16:00: ARC Forum and Social (Optional, no scheduled class)**
-  - **14:00 – 15:00:** ARC weekly forum.
-  - **15:00 onwards:** ARC social hour.
-  - No formal training session is scheduled on Tuesday afternoon so attendees can join these events.
+  - **14:00 – 15:00:** ARC weekly forum
+  - **15:00 onwards:** ARC social hour
+  - No formal training session scheduled; attendees may join optional events
 
-## Wednesday: Plug-and-Play Priors
+## Wednesday: Modular Deep Learning and Generative Models
 
-- **11:00 – 13:00: Plug-and-Play Methods (Lecture)**
-  - The Plug-and-Play Heuristic: Replacing the proximal operator with a pre-trained denoiser (BM3D, DnCNN, DRUNet); PnP-HQS and PnP-ADMM algorithms.
-  - Convergence Analysis: Fixed-point perspective (non-expansive and contractive denoisers, Banach's theorem); optimisation perspective.
-  - Regularisation by Denoising (RED).
+- **11:00 – 13:00: Modular Deep Learning and Generative AI (Lecture)**
+  - Modular Deep Learning via Plug-and-Play (PnP)
+    - Breaking the Rigidity of End-to-End and Unrolled Networks
+    - The Plug-and-Play Heuristic: Replacing Proximal Operators with Pre-Trained Denoisers
+    - PnP-HQS and PnP-ADMM Algorithms
+    - Convergence Analysis: Fixed-Point Perspective (Non-Expansive and Contractive Denoisers, Banach's Theorem)
+  - Defining Losses & The Jacobian Critique
+    - Regularisation by Denoising (RED): Learning from Denoiser Implicit Priors
+    - Critical Evaluation of Explicitly Defined Loss Functions
+    - Jacobian Critique and its Implications
+  - Deep Generative Modelling Frameworks
+    - Autoencoders and Variational Autoencoders (VAEs)
+      - Encoder–Decoder Structure and the Reparameterisation Trick
+      - ELBO (Evidence Lower Bound) Objective
+      - VAEs as Learned Latent-Space Priors
+    - Generative Adversarial Networks (GANs) and Normalising Flows
+  - Score-Based Models and Diffusion
+    - From Denoisers to Probability Distributions: Tweedie's Formula
+    - Denoising Score Matching
+    - The Forward Diffusion Process and Reverse-Time SDE
+    - Diffusion Models as Learned Priors for Inverse Problems
+    - Langevin Dynamics and Sampling
+    - Diffusion Posterior Sampling (DPS) for Solving Inverse Problems
 - **13:00 – 14:00: Lunch**
 - **14:00 – 16:00: Coding Challenge (continued)**
-  - Plugging a pre-trained denoiser into a PnP method as a drop-in regulariser for the deblurring problem, and comparing results to the unrolled network.
+  - Continue working in groups on your coding challenge contributions.
 
-## Thursday: Generative Models and Implicit Architectures
+## Thursday: Continuous Depth and Implicit Deep Learning
 
-- **11:00 – 13:00: Generative Models, Continuous Dynamics, and Deep Equilibrium Models (Lecture)**
-  - Autoencoders and Variational Autoencoders (VAEs): Encoder–decoder structure; the reparameterisation trick; the ELBO objective; VAEs as learned latent-space priors.
-  - Score-Based and Diffusion Models: Denoising score matching; the forward diffusion process and reverse-time SDE; diffusion models as priors for inverse problems.
-  - Deep Learning as Dynamical Systems: ResNets as forward Euler discretisations of an ODE; training as an optimal control problem and the adjoint state equation.
-  - Deep Equilibrium Models (DEQ): Replacing finite depth with a single fixed-point condition; memory-efficient training via implicit differentiation.
+- **11:00 – 13:00: Continuous Depth and Implicit Deep Learning (Lecture)**
+  - Deep Learning as Continuous Dynamical Systems
+    - ResNets as Forward Euler Discretisations of ODEs
+    - Gradient Flow as Continuous Optimisation
+    - Neural ODEs and Adaptive Computation
+  - Discretisation and Architectural Design
+    - From Continuous ODEs to Discrete Network Layers
+    - Symplectic Discretisations for Energy-Stable Networks
+    - Variational Networks (VNs): Incorporating Physics Through Discretisation Schemes
+  - The Early Stopping Paradox & Dynamic Depth
+    - Why Fixed Depth Leads to Suboptimality
+    - Learning Depth as a Continuous Parameter
+    - Resolving the Paradox: Adaptive Network Width and Depth
+  - Implicit Deep Learning & Deep Equilibrium Models (DEQ)
+    - Fixed-Point Problems and Implicit Function Theorem
+    - DEQ Architecture: Single Fixed-Point Condition vs. Finite Layers
+    - Memory-Efficient Training via Implicit Differentiation
+    - Adjoint Equations for Implicit Backpropagation
+  - Connection to Bilevel Learning
+    - DEQs as Optimisation-Defined Layers (Bilevel Framework)
+    - Implicit Differentiation for Hyperparameter Sensitivity
 - **13:00 – 14:00: Lunch**
 - **14:00 – 16:00: Guest Lecture and Q&A**
-  - Speaker: Dr Jonas Latz, University of Manchester.
+  - Speaker: [Dr Jonas Latz](https://latzplacian.org), University of Manchester.
   - Topic: Stochastic gradient methods in continuous time for machine learning, including stochastic gradient processes, convergence and ergodicity, and implications for modern ML optimisation practice.
   - Q&A with the guest speaker.
 
 ## Friday: Group Presentations
 
-- **10:00 – 12:00: Presentations (Session 1)**
+- **10:00 – 12:30: Presentations**
   - Student groups present their solution to the coding challenge.
   - Focus on: Architecture choice, training strategy, and evaluation of results (PSNR/SSIM).
-- **12:00 – 13:00: Lunch**
-- **13:00 – 15:00: Presentations (Session 2)**
-  - Continuation of presentations.
+- **12:30 – 13:30: Lunch**
+- **13:30: End of Training Week**
